@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open",
-    "cy:tests": "cypress run"
+    "cy:tests": "cypress run",
+    "test:login": "cypress run --spec cypress/integration/cucumber-tests/login -b chrome"
   },
   "keywords": [
     "Cypress",
