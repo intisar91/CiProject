@@ -1,0 +1,27 @@
+{
+  "name": "cy-test",
+  "version": "1.0.0",
+  "description": "Cypress with cucumber example",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "cy:tests": "cypress run"
+  },
+  "keywords": [
+    "Cypress",
+    "Bdd",
+    "Cucumber"
+  ],
+  "author": "Intisar Oulbani",
+  "license": "ISC",
+  "dependencies": {
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "prettier": "^2.8.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  }
+}
