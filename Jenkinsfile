@@ -7,10 +7,14 @@ pipeline {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+        stage('Install ') {
             steps {
-                echo 'Testing..'
-                sh "npm run test:login"
+                bat 'npm install '
+            }
+        }
+        stage('Test login') {
+            steps {
+                bat 'npm run test:login'
             }
         }
         stage('Deploy') {
