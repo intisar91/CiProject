@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cypress open",
     "cy:tests": "cypress run",
-    "test:login": "cypress run --spec cypress/integration/cucumber-tests/login"
+    "test:login": "cypress run --spec cypress/e2e -b chrome "
   },
   "keywords": [
     "Cypress",
