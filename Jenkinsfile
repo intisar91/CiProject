@@ -12,17 +12,18 @@ pipeline {
                 bat 'npm install '
             }
         }
-        stage('Run test') {
-
-            stage('Desktop test') {
-                        steps {
-                            bat 'npm run cy:tests'
-                        }
-            }
-            stage('Mobile test') {
-                steps {
-                            bat 'npm run cy:tests'
-                        }
+        stage('Run tests') {
+            steps {
+                parellel(
+                    Desktop test : {
+                        bat 'npm run cy:tests'
+                        echo 'echo running E2E Desktop tests'
+                    },
+                    Mobile test : {
+                        bat 'npm run cy:tests'
+                        echo 'echo running E2E Mobile tests'
+                    }
+                )
             }
         }
         stage('Deploy') {
