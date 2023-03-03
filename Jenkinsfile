@@ -13,7 +13,7 @@ pipeline {
             }
         }
         stage('Run tests') {
-                parellel {
+                parallel {
                     stage('PMVC test') {
                         steps {
                             bat 'npm run cy:tests'
