@@ -13,17 +13,25 @@ pipeline {
             }
         }
         stage('Run tests') {
-            steps {
-                parellel(
-                    Desktop test : {
-                        bat 'npm run cy:tests'
-                        echo 'echo running E2E Desktop tests'
-                    },
-                    Mobile test : {
-                        bat 'npm run cy:tests'
-                        echo 'echo running E2E Mobile tests'
+                parellel {
+                    stage('PMVC test') {
+                        steps {
+                            bat 'npm run cy:tests'
+                            echo 'echo running E2E PMVC tests'
+                        }
                     }
-                )
+                    stage('FRAM test') {
+                        steps {
+                            bat 'npm run cy:tests'
+                            echo 'echo running E2E FRAM tests'
+                        }
+                    }
+                    stage('PPC test') {
+                        steps {
+                            bat 'npm run cy:tests'
+                            echo 'echo running E2E PPC tests'
+                        }
+                    }
             }
         }
         stage('Deploy') {
