@@ -12,9 +12,17 @@ pipeline {
                 bat 'npm install '
             }
         }
-        stage('Test') {
-            steps {
-                bat 'npm run cy:tests'
+        stage('Run test') {
+
+            stage('Desktop test') {
+                        steps {
+                            bat 'npm run cy:tests'
+                        }
+            }
+            stage('Mobile test') {
+                steps {
+                            bat 'npm run cy:tests'
+                        }
             }
         }
         stage('Deploy') {
