@@ -23,7 +23,7 @@ pipeline {
                     stage('FRAM test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running E2E FRAM tests'
+                            echo 'echo running e2e FRAM tests'
                         }
                     }
                     stage('PPC test') {
