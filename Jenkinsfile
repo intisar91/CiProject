@@ -29,7 +29,7 @@ pipeline {
                     stage('PPC test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running E2E PPC tests'
+                            echo 'echo running e2e PPC tests'
                         }
                     }
             }
