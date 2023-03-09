@@ -17,19 +17,19 @@ pipeline {
                     stage('PMVC test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running E2E PMVC tests'
+                            //echo 'echo running E2E PMVC tests'
                         }
                     }
                     stage('FRAM test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running e2e FRAM tests'
+                           // echo 'echo running e2e FRAM tests'
                         }
                     }
                     stage('PPC test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running e2e PPC tests'
+                           // echo 'echo running e2e PPC tests'
                         }
                     }
             }
