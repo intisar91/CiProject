@@ -17,19 +17,13 @@ pipeline {
                     stage('PMVC test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running E2E PMVC tests'
+                            //echo 'echo running E2E PMVC tests'
                         }
                     }
                     stage('FRAM test') {
                         steps {
                             bat 'npm run cy:tests'
-                            echo 'echo running E2E FRAM tests'
-                        }
-                    }
-                    stage('PPC test') {
-                        steps {
-                            bat 'npm run cy:tests'
-                            echo 'echo running E2E PPC tests'
+                           // echo 'echo running e2e FRAM tests'
                         }
                     }
             }
@@ -40,4 +34,9 @@ pipeline {
             }
         }
     }
+    Post {
+    sucess {
+        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'reports', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+           }
+         }
 }
