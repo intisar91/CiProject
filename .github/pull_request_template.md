@@ -16,6 +16,5 @@ Décrivez vos changements.
 
 
 - [x] Desktop > FP > FP-Bloc_Images
-- [ ] Mobile > FP-Calendrier
-- [ ] Mobile > HP-Status_Status_FRAM  
-
+- [ ] Mobile > FP > FP-Calendrier
+- [ ] Mobile > HP > HP-Status_Status_FRAM  
