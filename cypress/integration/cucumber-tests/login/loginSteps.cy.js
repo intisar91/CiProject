@@ -5,11 +5,11 @@ Given('I open login page', () => {
 })
 
 When('I submit login', () => {
-    // Fill username 
-    cy.get('#user_login').type('username')
-    // Fill password
+    
+    cy.get('#user_login').type('Intisar QA engineer')
+    
     cy.get('#user_password').type('password')
-    // Click on submit
+    
     cy.get('input[name="submit"]').click()
   
 })
